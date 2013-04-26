@@ -1,7 +1,18 @@
-# Pugme is the most important thing in your life
-#
 # pug me - Receive a pug
 # pug bomb N - get N pugs
+
+# Description:
+#   Pugme is the most important thing in your life
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot pug me - Receive a pug
+#   hubot pug bomb N - get N pugs
 
 module.exports = (robot) ->
 
@@ -20,5 +31,4 @@ module.exports = (robot) ->
     msg.http("http://pugme.herokuapp.com/count")
       .get() (err, res, body) ->
         msg.send "There are #{JSON.parse(body).pug_count} pugs."
-
 
